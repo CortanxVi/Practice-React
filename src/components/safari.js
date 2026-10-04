@@ -49,7 +49,7 @@ export default function Safari() {
   const errors = [];
 
   for (const ticket of ticketTypes) {
-    if (!ticket.checked) continue;
+    if (!ticket.checked) continue; // ตรวจสอบสถานะการติ๊กเช็คของ checkbox ทั้งหมดโดยลูป
 
     const value = ticket.ref.current.value.trim();
 
@@ -102,7 +102,6 @@ export default function Safari() {
                         type="text"
                         name="childAmount"
                         style={amountStyle}
-                        disabled={!isChildChecked}
                       />
                       คน
                     </span>
@@ -128,7 +127,6 @@ export default function Safari() {
                         type="text"
                         name="adultAmount"
                         style={amountStyle}
-                        disabled={!isAdultChecked}
                       />
                       คน
                     </span>
@@ -154,7 +152,6 @@ export default function Safari() {
                         type="text"
                         name="seniorAmount"
                         style={amountStyle}
-                        disabled={!isSeniorChecked}
                       />
                       คน
                     </span>
